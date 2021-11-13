@@ -1796,3 +1796,13 @@ a:active {
 	-webkit-transform: none;
 	transform: none;
 }
+form + .status {
+	margin-top: 15px;
+	display: flex;
+	align-items: center;
+	color: #ccc;
+}
+form + .status img {
+	max-width: 30px;
+	max-height: 30px;
+}
