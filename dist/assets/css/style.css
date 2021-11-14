@@ -172,7 +172,6 @@ a:active {
 	z-index: 30;
 }
 .msg {
-	display: none;
 	margin-top: 20px;
 }
 .plus {
@@ -1561,6 +1560,10 @@ a:active {
 	letter-spacing: -0.28px;
 	text-transform: none;
 }
+.module__video-item[data-disabled="true"] .play {
+	pointer-events: none;
+	cursor: default;
+}
 .module__video .btn {
 	padding: 19px 24px 21px 24px;
 	background: #9ec73d;
@@ -1622,6 +1625,7 @@ a:active {
 	border: 1px solid rgba(0, 0, 0, 0.2);
 	border-radius: 8px;
 	width: 260px;
+	cursor: pointer;
 }
 .module__info-show .plus {
 	-webkit-transform: translateY(2px);
@@ -1674,6 +1678,7 @@ a:active {
 	display: flex;
 	justify-content: center;
 	height: 48px;
+	cursor: pointer;
 }
 .module__info-book .download svg {
 	-webkit-transform: translateY(2px);

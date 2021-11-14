@@ -49,6 +49,8 @@ export default class MainSlider extends Slider {
 
 			//Кнопка логотипа, по клику на 1 слайд
 			btn.parentNode.previousElementSibling.addEventListener('click', e => {
+				console.log(btn.parentNode);
+				console.log(btn.parentNode.previousElementSibling);
 				e.preventDefault();
 
 				//Перемещение к указанному слайду

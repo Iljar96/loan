@@ -1,11 +1,13 @@
+import Accordeon from "./modules/accordeon";
 import Difference from "./modules/difference";
+import Download from "./modules/download";
 import Forms from "./modules/forms";
 import VideoPlayer from "./modules/playVideo";
 import MainSlider from "./modules/slider/slider-main";
 import MiniSlider from "./modules/slider/slider-mini";
 
 window.addEventListener('DOMContentLoaded', () => {
-	const slider = new MainSlider({ container: '.page', btns: '.next' });
+	const slider = new MainSlider({ container: '.page', btns: ' .next' });
 	slider.render();
 	new MainSlider({ container: '.moduleapp', btns: '.next' }).render();
 
@@ -34,10 +36,14 @@ window.addEventListener('DOMContentLoaded', () => {
 	});
 	feedSlider.init();
 
-	const player1 = new VideoPlayer('.showup .play', '.overlay');
-	player1.init();
+	new VideoPlayer('.showup .play', '.overlay').init();
+	new VideoPlayer('.module__video .play', '.overlay').init();
 
 	new Difference('.officerold', '.officernew', '.officer__card-item').init();
 
 	new Forms('form').init();
+
+	new Accordeon('.module__info-show').init();
+
+	new Download('.download').init();
 });
